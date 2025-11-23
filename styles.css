@@ -1,11 +1,339 @@
 /* Add your CSS to this file */
+
+/* Global styles */
 body {
     margin: 0;
-    font-size: 16px;
-}
-
-.container {
+    font-size: 18px; /* per instructions */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #f9fafb;
+  }
+  
+  .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
-}
+    padding: 20px;
+  }
+  
+  /* Generic section spacing */
+  section {
+    padding: 40px 0;
+  }
+  
+  /* Header */
+  header {
+    background-color: #ffffff; /* per instructions */
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none; /* remove bullets */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 18px; /* per instructions */
+    color: #6b7280; /* default link colour */
+  }
+  
+  nav a:hover {
+    color: #5a67d8; /* hover colour from instructions */
+  }
+  
+  /* Hero Overview section (Live your healthiest life now) */
+  .overview-hero {
+    background-color: #e2e8f0; /* per instructions */
+  }
+  
+  /* Make image + text sit side-by-side and keep hero compact */
+  .overview-hero .container {
+    display: grid;
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+    column-gap: 40px;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .overview-hero img {
+    width: 100%;
+    max-width: 280px;   /* controls how wide the hero image can get */
+    max-height: 220px;  /* keeps the hero from being super tall */
+    object-fit: cover;  /* crop nicely if the photo is tall */
+    border-radius: 8px;
+    justify-self: center;
+  }
+  
+  .overview-hero .overview-hero-text {
+    align-self: center;
+  }
+  
+  .overview-hero h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .overview-hero p {
+    margin-top: 0;
+  }
+  
+  /* Learn About section */
+  .learn-about {
+    background-color: #ffffff;
+  }
+  
+  .learn-about h2 {
+    font-size: 24px; /* per instructions */
+    color: #48bb78; /* per instructions */
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid of cards – 3 columns on large screens */
+  .learn-about .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0; /* per instructions */
+    border-radius: 5px; /* per instructions */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* slight shadow */
+  }
+  
+  .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 1:1 ratio (square) */
+    object-fit: cover; /* ensures image fills the square nicely */
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 3px;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 21px; /* per instructions */
+    color: #48bb78; /* per instructions */
+  }
+  
+  /* COVID-19 Testing Programme section */
+  .testing {
+    background-color: #4a5568; /* per instructions */
+    color: #ffffff; /* per instructions */
+  }
+  
+  .testing .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .testing .testing-text {
+    flex: 2 1 300px;
+  }
+  
+  .testing h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .testing p {
+    margin-top: 0;
+  }
+  
+  /* "Learn More" button/link */
+  .testing a.button {
+    display: inline-block;
+    background-color: #48bb78; /* per instructions */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px; /* per instructions */
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .testing a.button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Recent Stories section */
+  .stories {
+    background-color: #ffffff;
+  }
+  
+  .stories h2 {
+    color: #5a67d8; /* per instructions */
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Layout of each story item */
+  .story {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .story img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* circular image per instructions */
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .story-content {
+    flex: 1;
+  }
+  
+  .story-content h3 {
+    margin: 0 0 8px;
+    font-size: 18px; /* per instructions */
+  }
+  
+  .story-content p {
+    margin: 0 0 8px;
+  }
+  
+  .story-content a {
+    color: #5a67d8; /* per instructions */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .story-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Newsletter section */
+  .newsletter {
+    background-color: #48bb78; /* per instructions */
+    color: #ffffff; /* per instructions */
+    text-align: center; /* center content per instructions */
+    padding: 40px 0;
+  }
+  
+  .newsletter .container {
+    max-width: 640px;
+  }
+  
+  .newsletter h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Form with input + button side by side */
+  .newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px;
+    min-width: 260px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .newsletter input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5a67d8; /* per instructions */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .newsletter input[type="submit"]:hover {
+    opacity: 0.9;
+  }
+  
+  /* Message area below the form */
+  .newsletter .message {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
+  /* Utility: screen-reader-only text (for hidden label) */
+  .sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4a5568; /* per instructions */
+    color: #ffffff; /* per instructions */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    /* Stack hero image + text on smaller screens */
+    .overview-hero .container {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      text-align: center;
+    }
+  
+    .overview-hero .overview-hero-text {
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+  
+    section {
+      padding: 30px 0;
+    }
+  }
+  
