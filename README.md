@@ -1,2 +1,3 @@
-# info2180-project1
-project 1 for info2180
+# INFO2180 Project 1
+
+This is Project 1 for Sashoy Morris
